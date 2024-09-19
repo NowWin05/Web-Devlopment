@@ -68,3 +68,6 @@ h2{
 #logoImg{
     height: 20px;
 }
+#banner12{
+    object-fit: cover;
+}
