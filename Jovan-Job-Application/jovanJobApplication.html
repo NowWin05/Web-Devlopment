@@ -4,6 +4,9 @@
         <title>
             Job Application Form
         </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="jovanJobApplication.css">
     </head>
     <Body>
@@ -54,15 +57,20 @@
     </div> -->
     <table   id="Job-table" >
         <tr class="table-heading">
-            <th >  Job Title </th>
-            <th>Location</th>
-            <th>Salary</th>
-            <th>Posted On</th>
+            <th  rowspan="2">  Job Title </th>
+            <th colspan="2">Location</th>
+            <th rowspan="2">Salary</th>
+            <th rowspan="2">Posted On</th>
+        </tr>
+        <tr class="table-heading">
+            <th>City</th>
+            <th>Country</th>
         </tr>
         <tr class=" table-data">
             <td>Frontend Developer</td>
-            <td>Bengaluru, India
+            <td>Bengaluru India
             </td>
+            <td>India</td>
             <td>₹12,00,000
             </td>
             <td>Mar 3, 2023
@@ -71,8 +79,9 @@
         <tr class=" table-data">
             <td>Full Stack Developer
             </td>
-            <td>New Delhi, India
+            <td>New Delhi India
             </td>
+            <td>India</td>
             <td>₹15,00,000
             </td>
             <td>Feb 1, 2023
@@ -81,8 +90,9 @@
         <tr class=" table-data">
             <td>Data Scientist
             </td>
-            <td>San Francisco, USA
+            <td>San Francisco
             </td>
+            <td>USA</td>
             <td>175000
             </td>
             <td>Dec 22, 2022
@@ -91,7 +101,7 @@
         <tr class=" table-data">
             <td>Machine Learning Engineer
             </td>
-            <td>Remote</td>
+            <td colspan="2">Remote</td>
             <td>80000
             </td>
             <td>Sep 19, 2022
