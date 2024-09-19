@@ -71,3 +71,26 @@ h2{
 #banner12{
     object-fit: cover;
 }
+#Job-table{
+    border: "1px" solid grey;
+    border-collapse: collapse;
+    
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.table-heading th{
+    border: 1px solid gray;
+    padding: 8px;
+    background-color:#d5e1df;
+}
+.table-data td{
+    border: 1px solid gray;
+    padding: 8px;
+}
+.table-data:nth-child(odd) {
+    background-color:  gainsboro;  /* Light gray */
+  }
