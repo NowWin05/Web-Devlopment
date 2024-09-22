@@ -32,9 +32,11 @@ body{
     background-color: whitesmoke;
     margin: 0px;
     padding: 0px;
+    
 }
 h1,h2,h3,h4,h5,h6{
     font-family: 'Inter',sans-serif;
+    
 }
 h2{
     padding: 20px;
@@ -44,11 +46,19 @@ h2{
    padding-left: 15%;
    padding-right: 15%;
 }
+a{
+    color: #1E40AF;
+}
+a:hover{
+    color: #172554;
+  
+}
 #bottom{
     list-style-type: none; /* Remove bullets */
       padding: 20px;
       margin: 0;
       text-align: center;
+      font-size: 1rem;
 }
 .list{
     display: inline; /* Make the list items inline */
@@ -60,7 +70,11 @@ h2{
 }
 #footer{
     background-color: gainsboro;
-    padding: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 0.75rem;;
+
+
 }
 #logo{
     background-color: ghostwhite;
@@ -83,17 +97,18 @@ h2{
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 64px;
     
 }
 .table-heading th{
     border: 1px solid gray;
     padding: 8px;
-    background-color:#d5e1df;
+    background-color:#BFDBFE;
 }
 .table-data td{
     border: 1px solid gray;
     padding: 8px;
 }
-.table-data:nth-child(odd) {
-    background-color:  gainsboro;  /* Light gray */
+.table-data:nth-child(even) {
+    background-color:  #DBEAFE;  /* Light gray */
   }

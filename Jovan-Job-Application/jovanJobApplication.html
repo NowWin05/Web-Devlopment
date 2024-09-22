@@ -43,18 +43,7 @@
 </div>
 
 <h2 >Job Roles</h2>
-<!-- <div id="roles">
-        <a href="mailto:support@jovian.com?subject=Application%20for%20Frontend%20Developer" style="float:right;" target="_blank">Apply</a>
-        <h3>Front end Developer </h3>
-        <span>Banglore,India</span>
-       <br>
-        <a href="mailto:support@jovian.com?subject=Application%20for%20Frontend%20Developer" style="float:right;" target="_blank">Apply</a>
-         <h3>Back end Developer</h3>
-        <span>Delhi,India</span>
-        <a href="mailto:support@jovian.com?subject=Application%20for%20Frontend%20Developer" style="float:right;" target="_blank">Apply</a>
-        <h3>Data Science</h3>
-        <span>Mumbai,India</span>
-    </div> -->
+
     <table   id="Job-table" >
         <tr class="table-heading">
             <th  rowspan="2">  Job Title </th>
@@ -109,6 +98,57 @@
         </tr>
     </table>
 
+    <form action="process-form.php" method="post">
+        <div class="form-group">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required placeholder="Jon Doe"> 
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required placeholder="abcxyz@gmail.com">
+        </div>
+        <div class="form-group"></div>
+            <label for="phn">Phone Number</label><br>
+            <input type="tel" id="phnNumber" name="PhNumber" required placeholder="1234567890">
+        </div>
+        <div class="form-group"></div>
+            <label for="dob">Date of Birth</label><br>
+            <input type="date" id="dob" name="dob" required placeholder="15-8-1900">
+        </div>
+        <div class="form-group"></div>
+            <label for="phn">Phone Number</label><br>
+            <input type="tel" id="phnNumber" name="PhNumber" required placeholder="1234567890">
+        </div>
+        <div class="form-group">
+            <label for="position">Position Applied for</label><br>
+            <select id="position" name="position" required>
+                <option value="">Select an option</option>
+                <option value="Frontend Developer">Frontend Developer</option>
+                <option value="Full Stack Developer">Full Stack Developer</option>
+                <option value="Data Scientist">Data Scientist</option>
+                <option value="ML Engineer">ML Engineer</option>
+            </select>
+        </div>
+        <div class="form-group"></div>
+            <label for="resume">Upload Resume</label><br>
+            <input type="file" id="resume" name="resume" >
+        </div>
+        <div class="form-group">
+            <label for="coverletter">Cover Letter</label><br>
+            <textarea id="coverletter" name="coverletter" rows="5" required placeholder="Explain what makes you suitable for the job.."></textarea>
+        </div>
+        <div class="form-group">
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                I agree to the terms and conditions
+            </label>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+
 <div id="footer">
         <ul id="bottom">
             <li class="list"><a href="https://jovian.com/learn" target="_blank">courses</a></li>
@@ -117,9 +157,7 @@
             
 
         </ul>
-    
-   
-        <p id="copyright">© 2023 Jovan</p>
+      <p id="copyright">© 2023 Jovan</p>
     </div>
     
     </Body>
