@@ -112,3 +112,10 @@ a:hover{
 .table-data:nth-child(even) {
     background-color:  #DBEAFE;  /* Light gray */
   }
+.fg{
+
+    max-width: 800px;
+    padding-left: 20%;
+    margin: 0,auto;
+    padding: 0,auto;
+}
