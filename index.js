@@ -91,6 +91,7 @@ function getUserLocation() {
         });
 
         showNotification("Location found! Starting from your current position.");
+        displayCurrentLocationDetails();
       },
       () => {
         showNotification("Unable to retrieve your location. Please allow location access.");
@@ -202,7 +203,7 @@ function colorRouteBasedOnTraffic(result) {
 function updateRouteWithRandomDetour() {
   if (!userLocation || !destination) return;
 
-  const detour = generateRandomDetours(userLocation, destination)[0]; // Generate one random detour
+  const detour = generateRandomDetours(userLocation)[0]; // Generate one random detour
 
   const request = {
     origin: userLocation,
@@ -227,15 +228,17 @@ function updateRouteWithRandomDetour() {
   });
 }
 
-// Generate random detours between origin and destination
-function generateRandomDetours(origin, destination) {
+// Generate random detours near the current location (within 100 meters)
+function generateRandomDetours(currentLocation) {
   const detours = [];
-  const latDiff = destination.lat() - origin.lat;
-  const lngDiff = destination.lng() - origin.lng;
-  
+  const radius = 0.001; // Approx. 100 meters
+
   for (let i = 0; i < 3; i++) { // Three random detours
-    const detourLat = origin.lat + Math.random() * latDiff * 0.5 * (Math.random() < 0.5 ? -1 : 1);
-    const detourLng = origin.lng + Math.random() * lngDiff * 0.5 * (Math.random() < 0.5 ? -1 : 1);
+    const angle = Math.random() * 2 * Math.PI;
+    const dx = radius * Math.cos(angle);
+    const dy = radius * Math.sin(angle);
+    const detourLat = currentLocation.lat + dx;
+    const detourLng = currentLocation.lng + dy;
     detours.push({ lat: detourLat, lng: detourLng });
   }
 
@@ -253,6 +256,7 @@ function trackUserLocation() {
         userMarker.setPosition(newLocation); // Update user marker position
         map.panTo(newLocation); // Center map on new position
         userLocation = newLocation; // Update user location
+        displayCurrentLocationDetails();
       },
       (error) => {
         console.error("Error tracking location:", error);
@@ -309,6 +313,15 @@ function displayPlaceDetails(place) {
       }
     });
   }
+}
+
+function displayCurrentLocationDetails() {
+  const currentLocationContainer = document.getElementById("current-location-details");
+  currentLocationContainer.innerHTML = `
+    <h3>Current Location</h3>
+    <p>Latitude: ${userLocation.lat}</p>
+    <p>Longitude: ${userLocation.lng}</p>
+  `;
 }
 
 function showNotification(message) {
